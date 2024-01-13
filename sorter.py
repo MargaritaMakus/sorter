@@ -1,3 +1,4 @@
+NAME = "sorter"
 from sys import argv
 
 
@@ -13,13 +14,13 @@ def str_to_arr(t):
 
 
 def sortt(arr):
-    arr_copy = arr.copy()  # Make a copy of the input list
+    arr_copy = arr.copy()  # жопа
     l = len(arr_copy)
     for j in range(l-1):
         for i in range(l-1-j):
             if len(arr_copy[i]) > len(arr_copy[i+1]):
                 arr_copy[i], arr_copy[i+1] = arr_copy[i+1], arr_copy[i]
-    return arr_copy  # Return the sorted copy
+    return arr_copy  
 
 
 def write_text(data, file_name):
@@ -34,4 +35,5 @@ def main():
     sorted_file = sortt(my_list)
     write_text(', '.join(sorted_file),out)
 
-main()
+if __name__ == "__main__":
+    main()
